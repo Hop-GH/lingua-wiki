@@ -1,128 +1,134 @@
-<!DOCTYPE html>
-<html lang="da"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Udtalt</title><link href="styles.css" rel="stylesheet"/><script src="script.js"></script><style>
-.language-switch {
-    position: fixed;
-    top: 14px;
-    right: 16px;
-    z-index: 1000;
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 14px;
-}
-.language-switch button {
-    border: 0;
-    padding: 0;
-    background: none;
-    color: black;
-    font: inherit;
-    text-decoration: underline;
-    cursor: pointer;
-}
-.language-switch button.active {
-    text-decoration: none;
-    font-weight: bold;
-    cursor: default;
-}
-</style></head><body><div aria-label="Language" class="language-switch"><button class="active" id="lang-da" type="button">DA</button> / <button id="lang-en" type="button">EN</button></div><div class="biggerbox">
-<h1><span data-da="IPA/DIPA-OVERSIGT" data-en="IPA/DIPA OVERVIEW">IPA/DIPA-OVERSIGT</span></h1>
-<div>
-<p class="text">
-                	<span data-da='Her er en lille oversigt over de to lydskriftsystemer "Utilpasset IPA" af Ruben Schachtenhaufen, beskrevet i hans bog' data-en='Here is a short overview of the two phonetic transcription systems "Unadapted IPA" by Ruben Schachtenhaufen, described in his book'>Her er en lille oversigt over de to lydskriftsystemer "Utilpasset IPA" af Ruben Schachtenhaufen, beskrevet i hans bog</span> <a href="https://schwa.dk/ndf/">"Ny Dansk Fonetik"</a> <span data-da="og dansk IPA (DIPA) fra bogen" data-en="and Danish IPA (DIPA) from the book">og dansk IPA (DIPA) fra bogen</span> <a href="https://samfundslitteratur.dk/bog/udtalt">"Udtalt"</a> <span data-da="af Jan Heegård Petersen, Holger Juul, Nicolai Pharao og Marie Maegaard. Klik på lydene for at høre dem udtalt, eller kig nede i skemaet med eksempler!" data-en="by Jan Heegård Petersen, Holger Juul, Nicolai Pharao and Marie Maegaard. Click the sounds to hear them pronounced, or look at the example table below!">af Jan Heegård Petersen, Holger Juul, Nicolai Pharao og Marie Maegaard. Klik på lydene for at høre dem udtalt, eller kig nede i skemaet med eksempler!</span>
-            	</p>
-</div>
-<p><b><span data-da="Klik på knapperne for at vise/gemme hvert skema." data-en="Click the buttons to show/hide each chart.">Klik på knapperne for at vise/gemme hvert skema.</span></b></p>
-<div class="bigbox">
-<input class="toggle-check-ipa" id="ipa_knap_label" type="checkbox"/>
-<label class="knap" for="ipa_knap_label" id="ipa_knap"><span data-da="Utilpasset IPA" data-en="Unadapted IPA">Utilpasset IPA</span></label>
-<input class="toggle-check-dipa" id="dipa_knap_label" type="checkbox"/>
-<label class="knap" for="dipa_knap_label" id="dipa_knap">Udtalt (DIPA)</label>
-<div class="break"></div>
-<div class="ipa_box">
-<h1 class="header"><span data-da="Utilpasset IPA" data-en="Unadapted IPA">Utilpasset IPA</span></h1>
-<div id="ipa_vokaler">
-<div class="tunge">
-<div class="ft"><span data-da="fortunge" data-en="front">fortunge</span></div>
-<div class="mt"><span data-da="mellemtunge" data-en="central">mellemtunge</span></div>
-<div class="bt"><span data-da="bagtunge" data-en="back">bagtunge</span></div>
-</div>
-<div class="hoejde">
-<div class="h"><span data-da="lukket" data-en="close">lukket</span></div>
-<div class="hh"><span data-da="halvåben" data-en="half-open">halvåben</span></div>
-<div class="hl"><span data-da="halvlukket" data-en="half-closed">halvlukket</span></div>
-<div class="l"><span data-da="åben" data-en="open">åben</span></div>
-</div>
-<div>
-<a class="ipa_vokal" id="ipa_for_hoj_rund" onclick="mit.play()">i</a>
-<a class="ipa_vokal" id="ipa_for_hoj_urund" onclick="syv.play()">y</a>
-<a class="ipa_vokal" id="ipa_for_halvhoj_rund" onclick="doev.play()">ø</a>
-<a class="ipa_vokal" id="ipa_for_halvhoj_urund2" onclick="maet.play()">ɛ</a>
-<a class="ipa_vokal" id="ipa_for_halvhoj_urund1" onclick="midt.play()">e</a>
-<a class="ipa_vokal" id="ipa_for_halvlav_rund" onclick="proev.play()">œ</a>
-<a class="ipa_vokal" id="ipa_for_lav_rund" onclick="mat.play()">æ</a>
-<a class="ipa_vokal" id="ipa_for_lav_urund" onclick="droev.play()">ɶ</a>
-<a class="ipa_vokal" id="ipa_schwa1" onclick="lappe.play()">ə</a>
-<a class="ipa_vokal" id="ipa_schwa2" onclick="lapper.play()">ɐ</a>
-<a class="ipa_vokal" id="ipa_bag_hoj_rund" onclick="mut.play()">u</a>
-<a class="ipa_vokal" id="ipa_bag_halvhoj_rund" onclick="foto.play()">o</a>
-<a class="ipa_vokal" id="ipa_bag_halvlav_rund" onclick="sund.play()">ɔ</a>
-<a class="ipa_vokal" id="ipa_bag_lav_rund" onclick="vor.play()">ɒ</a>
-<a class="ipa_vokal" id="ipa_bag_lav_urund" onclick="brat.play()">a</a>
-<a class="ipa_vokal" id="ipa_svag_for" onclick="ii.play()">ɪ</a>
-<a class="ipa_vokal" id="ipa_svag_bag" onclick="vv.play()">ʊ</a>
-<a class="ipa_vokal" id="ipa_svag_halvlav" onclick="dd.play()">ɤ</a>
-</div>
-<img class="image" src="images/vowel-trapezoid.svg"/>
-</div>
-<div class="ipa_konsonanter">
+<td>e</td>
+<td>ɛ</td>
+<td>æ</td>
+<td>a</td>
+<td>ɑ</td>
+<td>y</td>
+<td>ø</td>
+<td>œ</td>
+<td>ɶ</td>
+<td>u</td>
+<td>o</td>
+<td>ɔ</td>
+<td>ɒ</td>
+<td>ʌ</td>
+<td>ə</td>
+<td>ɐ</td>
+<td class="note" data-title-da="Analyseres i Udtalt som halvvokaler" data-title-en="Analysed in Udtalt as semivowels" title="Analyseres i Udtalt som halvvokaler">—</td>
+<td class="note" data-title-da="Analyseres i Udtalt som halvvokaler" data-title-en="Analysed in Udtalt as semivowels" title="Analyseres i Udtalt som halvvokaler">—</td>
+<td class="note" data-title-da="Analyseres i Udtalt som halvvokaler" data-title-en="Analysed in Udtalt as semivowels" title="Analyseres i Udtalt som halvvokaler">—</td>
+</tr>
+</table>
 <table>
-<tbody><tr>
-<td></td>
-<th colspan="2">Labial</th>
-<th><span data-da="Alveolær" data-en="Alveolar">Alveolær</span></th>
-<th><span data-da="Alveolo-palatal" data-en="Alveolo-palatal">Alveolo-palatal</span></th>
-<th><span data-da="Palatal" data-en="Palatal">Palatal</span></th>
-<th colspan="2"><span data-da="Velær" data-en="Velar">Velær</span></th>
-<th><span data-da="Uvulær" data-en="Uvular">Uvulær</span></th>
-<th><span data-da="Glottal" data-en="Glottal">Glottal</span></th>
-</tr>
 <tr>
-<th><span data-da="Nasal" data-en="Nasal">Nasal</span></th>
-<td class="ipa_konsonant" colspan="2" onclick="m.play()">m</td>
-<td></td>
-<td class="ipa_konsonant" onclick="n.play()">n</td>
-<td></td>
-<td class="ipa_konsonant" colspan="2" onclick="ng.play()">ŋ</td>
-<td></td>
-<td></td>
+<th><span data-da="Eksempelord konsonanter" data-en="Consonant example words">Eksempelord konsonanter</span></th>
+<th>pak</th>
+<th>tak</th>
+<th>kat</th>
+<th>bat</th>
+<th>dat</th>
+<th>gat</th>
+<th>fat</th>
+<th>sat</th>
+<th>sjat</th>
+<th>hat</th>
+<th>vat</th>
+<th>mat</th>
+<th>nat</th>
+<th>ta<u>ng</u></th>
+<th>ladt</th>
+<th>rat</th>
+<th>ba<u>d</u></th>
+<th>ha<u>v</u></th>
+<th>ha<u>j</u></th>
+<th>mo<u>r</u></th>
 </tr>
-<tr>
-<th><span data-da="Plosiv" data-en="Plosive">Plosiv</span></th>
-<td class="ipa_konsonant" onclick="p.play()">pʰ</td>
-<td class="ipa_konsonant" onclick="b.play()">p</td>
-<td class="ipa_konsonant" onclick="t.play()">t</td>
-<td></td>
-<td></td>
-<td class="ipa_konsonant" onclick="k.play()">kʰ</td>
-<td class="ipa_konsonant" onclick="g.play()">k</td>
-<td></td>
-<td></td>
+<tr class="ipaeks">
+<th><span data-da="IPA-lydskrift" data-en="IPA transcription">IPA-lydskrift</span></th>
+<td>pʰ</td>
+<td>ts</td>
+<td>kʰ</td>
+<td>p</td>
+<td>t</td>
+<td>k</td>
+<td>f</td>
+<td>s</td>
+<td>ɕ</td>
+<td>h</td>
+<td>v</td>
+<td>m</td>
+<td>n</td>
+<td>ŋ</td>
+<td>l</td>
+<td>ʁ</td>
+<td class="note" data-title-da="Analyseres i NDF som vokal" data-title-en="Analysed in NDF as a vowel" title="Analyseres i NDF som vokal">—</td>
+<td class="note" data-title-da="Analyseres i NDF som vokal" data-title-en="Analysed in NDF as a vowel" title="Analyseres i NDF som vokal">—</td>
+<td class="note" data-title-da="Analyseres i NDF som vokal" data-title-en="Analysed in NDF as a vowel" title="Analyseres i NDF som vokal">—</td>
+<td class="note" data-title-da="Analyseres i NDF som vokal" data-title-en="Analysed in NDF as a vowel" title="Analyseres i NDF som vokal">—</td>
 </tr>
-<tr>
-<th><span data-da="Affrikat" data-en="Affricate">Affrikat</span></th>
-<td colspan="2"></td>
-<td></td>
-<td class="ipa_konsonant" onclick="t.play()">ts</td>
-<td class="ipa_konsonant" onclick="tj.play()">tɕ</td>
-<td colspan="2"></td>
-<td></td>
-<td></td>
+<tr class="dipaeks">
+<th><span data-da="DIPA-lydskrift" data-en="DIPA transcription">DIPA-lydskrift</span></th>
+<td>p</td>
+<td>t</td>
+<td>k</td>
+<td>b</td>
+<td>d</td>
+<td>g</td>
+<td>f</td>
+<td>s</td>
+<td>ɕ</td>
+<td>h</td>
+<td>v</td>
+<td>m</td>
+<td>n</td>
+<td>ŋ</td>
+<td>l</td>
+<td>ʁ</td>
+<td>ð</td>
+<td>ʊ̯</td>
+<td>ɪ̯</td>
+<td>ɐ̯</td>
 </tr>
-<tr>
-<th><span data-da="Frikativ" data-en="Fricative">Frikativ</span></th>
-<td class="ipa_konsonant" colspan="2" onclick="f.play()">f</td>
-<td></td>
-<td class="ipa_konsonant" onclick="s.play()">s</td>
-<td class="ipa_konsonant" onclick="sj.play()">ɕ</td>
-<td colspan="2"></td>
-<td></td>
-<td class="ipa_konsonant" onclick="h.play()">h</td>
-</tr>
+</table>
+</div>
+<div class="resurser">
+<h2><span data-da="Ressourcer og kilder" data-en="Resources and sources">Ressourcer og kilder</span></h2>
+<div class="resurser_text">
+<p><a href="https://udtaleordbog.dk/">Udtaleordbog.dk</a><span data-da=': Dansk ordbog, hvor man kan søge efter ords udtale. Ved at gå ind under "➕ Søgemuligheder" under søgebaren kan man justere, hvilket lydskriftssystem der bliver brugt. Standardindstillingen er Utilpasset IPA.' data-en=': A Danish dictionary where you can look up the pronunciation of words. Under "➕ Search options" beneath the search bar, you can choose which phonetic transcription system is used. The default is Unadapted IPA.'>: Dansk ordbog, hvor man kan søge efter ords udtale. Ved at gå ind under "➕ Søgemuligheder" under søgebaren kan man justere, hvilket lydskriftssystem der bliver brugt. Standardindstillingen er Utilpasset IPA.</span></p>
+<p><a href="https://udtaleordbog.dk/ipa.php"><span data-da="Overblik over IPA-lydskrift for dansk" data-en="Overview of IPA transcription for Danish">Overblik over IPA-lydskrift for dansk</span></a><span data-da=": Gennemgår systemet for utilpasset IPA. Jeg brugte hovedsageligt denne artikel til IPA-delen." data-en=": Covers the Unadapted IPA system. I mainly used this article for the IPA section.">: Gennemgår systemet for utilpasset IPA. Jeg brugte hovedsageligt denne artikel til IPA-delen.</span></p>
+<p><span data-da='Siderne 57, 76-77 og 211 i "Udtalt": Den primære kilde til DIPA-delen, og de fleste eksempelord er taget herfra.' data-en='Pages 57, 76–77 and 211 of "Udtalt": The primary source for the DIPA section, and most of the example words are taken from here.'>Siderne 57, 76-77 og 211 i "Udtalt": Den primære kilde til DIPA-delen, og de fleste eksempelord er taget herfra.</span></p>
+</div>
+</div>
+</div>
+</div>
+<script>
+(function () {
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+
+        document.querySelectorAll("[data-da][data-en]").forEach(function (el) {
+            el.textContent = el.dataset[lang];
+        });
+
+        document.querySelectorAll("[data-title-da][data-title-en]").forEach(function (el) {
+            el.title = lang === "da" ? el.dataset.titleDa : el.dataset.titleEn;
+        });
+
+        document.getElementById("lang-da").classList.toggle("active", lang === "da");
+        document.getElementById("lang-en").classList.toggle("active", lang === "en");
+
+        localStorage.setItem("lingua-language", lang);
+    }
+
+    document.getElementById("lang-da").addEventListener("click", function () {
+        setLanguage("da");
+    });
+
+    document.getElementById("lang-en").addEventListener("click", function () {
+        setLanguage("en");
+    });
+
+    setLanguage(localStorage.getItem("lingua-language") === "en" ? "en" : "da");
+})();
+</script></body>
+</html>
