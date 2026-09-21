@@ -16,7 +16,7 @@ Interactive audio charts for IPA as described in R. Schachtenhaufen’s *Ny Dans
 
 Simply click a symbol to hear the sound it represents.
 
-Credit goes to Awiso for creating these awesome charts and recording the audio files.
+*All credit goes to Awiso for creating these awesome charts and recording the audio files.*
 
 ## License
 
