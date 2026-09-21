@@ -1,3 +1,355 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<title>Udtalt</title>
+<link href="styles.css" rel="stylesheet"/>
+<script src="script.js"></script>
+<style>
+.language-switch {
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    z-index: 1000;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+}
+.language-switch button {
+    border: 0;
+    padding: 0;
+    background: none;
+    color: black;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.language-switch button.active {
+    text-decoration: none;
+    font-weight: bold;
+    cursor: default;
+}
+</style></head>
+<body><div aria-label="Language" class="language-switch"><button class="active" id="lang-da" type="button">DA</button> / <button id="lang-en" type="button">EN</button></div>
+<div class="biggerbox">
+<h1><span data-da="IPA/DIPA-OVERSIGT" data-en="IPA/DIPA OVERVIEW">IPA/DIPA-OVERSIGT</span></h1>
+<div>
+<p class="text">
+                	<span data-da='Her er en lille oversigt over de to lydskriftssystemer "Utilpasset IPA" af Ruben Schachtenhaufen, beskrevet i hans bog' data-en='Here is a short overview of the two phonetic transcription systems "Unadapted IPA" by Ruben Schachtenhaufen, described in his book'>Her er en lille oversigt over de to lydskriftssystemer "Utilpasset IPA" af Ruben Schachtenhaufen, beskrevet i hans bog</span> <a href="https://schwa.dk/ndf/">"Ny Dansk Fonetik"</a> <span data-da="og dansk IPA (DIPA) fra bogen" data-en="and Danish IPA (DIPA) from the book">og dansk IPA (DIPA) fra bogen</span> <a href="https://samfundslitteratur.dk/bog/udtalt">"Udtalt"</a> <span data-da="af Jan Heegård Petersen, Holger Juul, Nicolai Pharao og Marie Maegaard. Klik på lydene for at høre dem udtalt, eller kig nede i skemaet med eksempler!" data-en="by Jan Heegård Petersen, Holger Juul, Nicolai Pharao and Marie Maegaard. Click the sounds to hear them pronounced, or look at the example table below!">af Jan Heegård Petersen, Holger Juul, Nicolai Pharao og Marie Maegaard. Klik på lydene for at høre dem udtalt, eller kig nede i skemaet med eksempler!</span>
+            	</p>
+</div>
+<p><b><span data-da="Klik på knapperne for at vise/gemme hvert skema." data-en="Click the buttons to show/hide each chart.">Klik på knapperne for at vise/gemme hvert skema.</span></b></p>
+<div class="bigbox">
+<input class="toggle-check-ipa" id="ipa_knap_label" type="checkbox"/>
+<label class="knap" for="ipa_knap_label" id="ipa_knap"><span data-da="Utilpasset IPA" data-en="Unadapted IPA">Utilpasset IPA</span></label>
+<input class="toggle-check-dipa" id="dipa_knap_label" type="checkbox"/>
+<label class="knap" for="dipa_knap_label" id="dipa_knap">Udtalt (DIPA)</label>
+<div class="break"></div>
+<div class="ipa_box">
+<h1 class="header"><span data-da="Utilpasset IPA" data-en="Unadapted IPA">Utilpasset IPA</span></h1>
+<div id="ipa_vokaler">
+<div class="tunge">
+<div class="ft"><span data-da="fortunge" data-en="front">fortunge</span></div>
+<div class="mt"><span data-da="mellemtunge" data-en="central">mellemtunge</span></div>
+<div class="bt"><span data-da="bagtunge" data-en="back">bagtunge</span></div>
+</div>
+<div class="hoejde">
+<div class="h"><span data-da="lukket" data-en="close">lukket</span></div>
+<div class="hh"><span data-da="halvåben" data-en="half-open">halvåben</span></div>
+<div class="hl"><span data-da="halvlukket" data-en="half-closed">halvlukket</span></div>
+<div class="l"><span data-da="åben" data-en="open">åben</span></div>
+</div>
+<div>
+<a class="ipa_vokal" id="ipa_for_hoj_rund" onclick="mit.play('mit.mp3')">i</a>
+<a class="ipa_vokal" id="ipa_for_hoj_urund" onclick="syv.play('syv.mp3')">y</a>
+<a class="ipa_vokal" id="ipa_for_halvhoj_rund" onclick="doev.play('doev.mp3')">ø</a>
+<a class="ipa_vokal" id="ipa_for_halvhoj_urund2" onclick="maet.play('maet.mp3')">ɛ</a>
+<a class="ipa_vokal" id="ipa_for_halvhoj_urund1" onclick="midt.play('midt.mp3')">e</a>
+<a class="ipa_vokal" id="ipa_for_halvlav_rund" onclick="proev.play('proev.mp3')">œ</a>
+<a class="ipa_vokal" id="ipa_for_lav_rund" onclick="mat.play('mat.mp3')">æ</a>
+<a class="ipa_vokal" id="ipa_for_lav_urund" onclick="droev.play('droev.mp3')">ɶ</a>
+<a class="ipa_vokal" id="ipa_schwa1" onclick="lappe.play('lappe.mp3')">ə</a>
+<a class="ipa_vokal" id="ipa_schwa2" onclick="lapper.play('lapper.mp3')">ɐ</a>
+<a class="ipa_vokal" id="ipa_bag_hoj_rund" onclick="mut.play('mut.mp3')">u</a>
+<a class="ipa_vokal" id="ipa_bag_halvhoj_rund" onclick="foto.play('foto.mp3')">o</a>
+<a class="ipa_vokal" id="ipa_bag_halvlav_rund" onclick="sund.play('sund.mp3')">ɔ</a>
+<a class="ipa_vokal" id="ipa_bag_lav_rund" onclick="vor.play('vor.mp3')">ɒ</a>
+<a class="ipa_vokal" id="ipa_bag_lav_urund" onclick="brat.play('brat.mp3')">a</a>
+<a class="ipa_vokal" id="ipa_svag_for" onclick="ii.play('ii.mp3')">ɪ</a>
+<a class="ipa_vokal" id="ipa_svag_bag" onclick="vv.play('vv.mp3')">ʊ</a>
+<a class="ipa_vokal" id="ipa_svag_halvlav" onclick="dd.play('dd.mp3')">ɤ</a>
+</div>
+<img class="image" src="images/vowel-trapezoid.svg"/>
+</div>
+<div class="ipa_konsonanter">
+<table>
+<tr>
+<td></td>
+<th colspan="2">Labial</th>
+<th><span data-da="Alveolær" data-en="Alveolar">Alveolær</span></th>
+<th><span data-da="Alveolo-palatal" data-en="Alveolo-palatal">Alveolo-palatal</span></th>
+<th><span data-da="Palatal" data-en="Palatal">Palatal</span></th>
+<th colspan="2"><span data-da="Velær" data-en="Velar">Velær</span></th>
+<th><span data-da="Uvulær" data-en="Uvular">Uvulær</span></th>
+<th><span data-da="Glottal" data-en="Glottal">Glottal</span></th>
+</tr>
+<tr>
+<th><span data-da="Nasal" data-en="Nasal">Nasal</span></th>
+<td class="ipa_konsonant" colspan="2" onclick="m.play('m.mp3')">m</td>
+<td></td>
+<td class="ipa_konsonant" onclick="n.play('n.mp3')">n</td>
+<td></td>
+<td class="ipa_konsonant" colspan="2" onclick="ng.play('ng.mp3')">ŋ</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th><span data-da="Plosiv" data-en="Plosive">Plosiv</span></th>
+<td class="ipa_konsonant" onclick="p.play('p.mp3')">pʰ</td>
+<td class="ipa_konsonant" onclick="b.play('b.mp3')">p</td>
+<td class="ipa_konsonant" onclick="t.play('t.mp3')">t</td>
+<td></td>
+<td></td>
+<td class="ipa_konsonant" onclick="k.play('k.mp3')">kʰ</td>
+<td class="ipa_konsonant" onclick="g.play('g.mp3')">k</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th><span data-da="Affrikat" data-en="Affricate">Affrikat</span></th>
+<td colspan="2"></td>
+<td></td>
+<td class="ipa_konsonant" onclick="t.play('t.mp3')">ts</td>
+<td class="ipa_konsonant" onclick="tj.play('tj.mp3')">tɕ</td>
+<td colspan="2"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th><span data-da="Frikativ" data-en="Fricative">Frikativ</span></th>
+<td class="ipa_konsonant" colspan="2" onclick="f.play('f.mp3')">f</td>
+<td></td>
+<td class="ipa_konsonant" onclick="s.play('s.mp3')">s</td>
+<td class="ipa_konsonant" onclick="sj.play('sj.mp3')">ɕ</td>
+<td colspan="2"></td>
+<td></td>
+<td class="ipa_konsonant" onclick="h.play('h.mp3')">h</td>
+</tr>
+<tr>
+<th><span data-da="Approksimant" data-en="Approximant">Approksimant</span></th>
+<td class="ipa_konsonant" colspan="2" onclick="v.play('v.mp3')">v</td>
+<td></td>
+<td></td>
+<td class="ipa_konsonant" onclick="j.play('j.mp3')">j</td>
+<td colspan="2"></td>
+<td class="ipa_konsonant" onclick="r.play('r.mp3')">ʁ</td>
+<td></td>
+</tr>
+<tr>
+<th><span data-da="Lateral" data-en="Lateral">Lateral</span></th>
+<td colspan="2"></td>
+<td></td>
+<td class="ipa_konsonant" onclick="l.play('l.mp3')">l</td>
+<td></td>
+<td colspan="2"></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<div class="ipa_ekstrategn">
+<table>
+<tr>
+<th><span data-da="Stød" data-en="Stød">Stød</span></th>
+<td class="ipa_konsonant" onclick="xx.play('xx.mp3')">◌̰</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="dipa_box">
+<h1 class="header">Udtalt (DIPA)</h1>
+<div id="dipa_vokaler">
+<div class="tunge">
+<div class="ft"><span data-da="fortunge" data-en="front">fortunge</span></div>
+<div class="mt"><span data-da="mellemtunge" data-en="central">mellemtunge</span></div>
+<div class="bt"><span data-da="bagtunge" data-en="back">bagtunge</span></div>
+</div>
+<div class="hoejde">
+<div class="h"><span data-da="høj" data-en="high">høj</span></div>
+<div class="hh"><span data-da="halvhøj" data-en="half-high">halvhøj</span></div>
+<div class="hl"><span data-da="halvlav" data-en="half-low">halvlav</span></div>
+<div class="l"><span data-da="lav" data-en="low">lav</span></div>
+</div>
+<div>
+<a class="dipa_vokal" id="dipa_for_hoj_rund" onclick="mit.play('mit.mp3')">i</a>
+<a class="dipa_vokal" id="dipa_for_hoj_urund" onclick="syv.play('syv.mp3')">y</a>
+<a class="dipa_vokal" id="dipa_for_halvhoj_rund" onclick="doev.play('doev.mp3')">ø</a>
+<a class="dipa_vokal" id="dipa_for_halvhoj_urund2" onclick="maet.play('maet.mp3')">ɛ</a>
+<a class="dipa_vokal" id="dipa_for_halvhoj_urund1" onclick="midt.play('midt.mp3')">e</a>
+<a class="dipa_vokal" id="dipa_for_halvlav_rund" onclick="proev.play('proev.mp3')">œ</a>
+<a class="dipa_vokal" id="dipa_for_halvlav_urund" onclick="mat.play('mat.mp3')">æ</a>
+<a class="dipa_vokal" id="dipa_for_lav_rund" onclick="baer.play('baer.mp3')">a</a>
+<a class="dipa_vokal" id="dipa_for_lav_urund" onclick="droev.play('droev.mp3')">ɶ</a>
+<a class="dipa_vokal" id="dipa_schwa1" onclick="lappe.play('lappe.mp3')">(ə)</a>
+<a class="dipa_vokal" id="dipa_schwa2" onclick="lapper.play('lapper.mp3')">(ɐ)</a>
+<a class="dipa_vokal" id="dipa_bag_hoj_rund" onclick="mut.play('mut.mp3')">u</a>
+<a class="dipa_vokal" id="dipa_bag_halvhoj_rund" onclick="foto.play('foto.mp3')">o</a>
+<a class="dipa_vokal" id="dipa_bag_halvlav_rund" onclick="sund.play('sund.mp3')">ɔ</a>
+<a class="dipa_vokal" id="dipa_bag_halvlav_urund" onclick="godt.play('godt.mp3')">ʌ</a>
+<a class="dipa_vokal" id="dipa_bag_lav_rund" onclick="vor.play('vor.mp3')">ɒ</a>
+<a class="dipa_vokal" id="dipa_bag_lav_urund" onclick="brat.play('brat.mp3')">ɑ</a>
+</div>
+<img class="image" src="images/vowel-trapezoid.svg"/>
+</div>
+<div class="dipa_konsonanter">
+<table>
+<tr>
+<td></td>
+<th colspan="2">Labial</th>
+<th colspan="2"><span data-da="Alveolær" data-en="Alveolar">Alveolær</span></th>
+<th><span data-da="Palatal" data-en="Palatal">Palatal</span></th>
+<th colspan="2"><span data-da="Velær" data-en="Velar">Velær</span></th>
+<th><span data-da="Uvulær" data-en="Uvular">Uvulær</span></th>
+<th><span data-da="Glottal" data-en="Glottal">Glottal</span></th>
+</tr>
+<tr>
+<th><span data-da="Nasal" data-en="Nasal">Nasal</span></th>
+<td class="dipa_konsonant" onclick="m.play('m.mp3')">m</td>
+<td></td>
+<td class="dipa_konsonant" onclick="n.play('n.mp3')">n</td>
+<td></td>
+<td class="dipa_konsonant" onclick="ng.play('ng.mp3')">ŋ</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th><span data-da="Klusiv" data-en="Plosive">Klusiv</span></th>
+<td class="dipa_konsonant" onclick="p.play('p.mp3')">p</td>
+<td class="dipa_konsonant" onclick="b.play('b.mp3')">b</td>
+<td class="dipa_konsonant" onclick="t.play('t.mp3')">t</td>
+<td class="dipa_konsonant" onclick="d.play('d.mp3')">d</td>
+<td></td>
+<td class="dipa_konsonant" onclick="k.play('k.mp3')">k</td>
+<td class="dipa_konsonant" onclick="g.play('g.mp3')">g</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<th><span data-da="Frikativ" data-en="Fricative">Frikativ</span></th>
+<td class="dipa_konsonant" onclick="f.play('f.mp3')">f</td>
+<td></td>
+<td class="dipa_konsonant" onclick="s.play('s.mp3')">s</td>
+<td></td>
+<td class="dipa_konsonant" onclick="sj.play('sj.mp3')">(ɕ)</td>
+<td></td>
+<td></td>
+<td></td>
+<td class="dipa_konsonant" onclick="h.play('h.mp3')">h</td>
+</tr>
+<tr>
+<th><span data-da="Approksimant" data-en="Approximant">Approksimant</span></th>
+<td class="dipa_konsonant" onclick="v.play('v.mp3')">v</td>
+<td></td>
+<td class="dipa_konsonant" onclick="bloedt_d.play('bloedt_d.mp3')">ð</td>
+<td></td>
+<td class="dipa_konsonant" onclick="j.play('j.mp3')">j</td>
+<td></td>
+<td></td>
+<td class="dipa_konsonant" onclick="r.play('r.mp3')">ʁ</td>
+<td></td>
+</tr>
+<tr>
+<th><span data-da="Lateral" data-en="Lateral">Lateral</span></th>
+<td></td>
+<td></td>
+<td class="dipa_konsonant" onclick="l.play('l.mp3')">l</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
+<div class="dipa_ekstrategn">
+<table>
+<tr>
+<th colspan="2"><span data-da="Halvvokaler" data-en="Semivowels">Halvvokaler</span></th>
+</tr>
+<tr>
+<th><span data-da="Labial-velær approksimant" data-en="Labial-velar approximant">Labial-velær approksimant</span></th>
+<td class="dipa_konsonant" onclick="uv.play('uv.mp3')">ʊ̯</td>
+</tr>
+<tr>
+<th><span data-da="Uvulær approksimant" data-en="Uvular approximant">Uvulær approksimant</span></th>
+<td class="dipa_konsonant" onclick="ar.play('ar.mp3')">ɐ̯</td>
+</tr>
+<tr>
+<th><span data-da="Palatal approksimant" data-en="Palatal approximant">Palatal approksimant</span></th>
+<td class="dipa_konsonant" onclick="ij.play('ij.mp3')">ɪ̯</td>
+</tr>
+</table>
+<table>
+<tr>
+<th><span data-da="Stød" data-en="Stød">Stød</span></th>
+<td class="dipa_konsonant" onclick="xx.play('xx.mp3')">◌ˀ</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div id="eksempler">
+<table>
+<tr>
+<th><span data-da="Eksempelord vokaler" data-en="Vowel example words">Eksempelord vokaler</span></th>
+<th>mit</th>
+<th>midt</th>
+<th>mæt</th>
+<th>male</th>
+<th>bat</th>
+<th>brat</th>
+<th>syv</th>
+<th>døv</th>
+<th>prøv</th>
+<th>drøv</th>
+<th>mut</th>
+<th>foto</th>
+<th>sund</th>
+<th>vor</th>
+<th>godt</th>
+<th>lapp<u>e</u></th>
+<th>lapp<u>er</u></th>
+<th>fatt<u>ig</u></th>
+<th>fatt<u>et</u></th>
+<th>ha<u>v</u></th>
+</tr>
+<tr class="ipaeks">
+<th><span data-da="IPA-lydskrift" data-en="IPA transcription">IPA-lydskrift</span></th>
+<td>i</td>
+<td>e</td>
+<td>ɛ</td>
+<td>æ</td>
+<td>æ</td>
+<td>a</td>
+<td>y</td>
+<td>ø</td>
+<td>œ</td>
+<td>ɶ</td>
+<td>u</td>
+<td>o</td>
+<td>ɔ</td>
+<td>ɒ</td>
+<td>ɒ</td>
+<td>ə</td>
+<td>ɐ</td>
+<td>ɪ</td>
+<td>ɤ</td>
+<td>ʊ</td>
+</tr>
+<tr class="dipaeks">
+<th><span data-da="DIPA-lydskrift" data-en="DIPA transcription">DIPA-lydskrift</span></th>
+<td>i</td>
 <td>e</td>
 <td>ɛ</td>
 <td>æ</td>
