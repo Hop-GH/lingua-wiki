@@ -1,0 +1,487 @@
+
+/* generel styling */
+
+html {
+  font-family: "Helvetica", "Arial", sans-serif;
+}
+
+.biggerbox {
+    text-align: center;
+    display: grid;
+    place-items: center;
+}
+
+.bigbox {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.header {
+    position: absolute;
+    margin-top: -20px;
+}
+
+.text {
+	max-width: 1200px;
+	margin: -5px 0 20px 0;
+	font-size: 18px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* toggle for DIPA/IPA */
+
+.toggle-check-dipa:checked ~ .dipa_box {
+    display: none;
+}
+
+.toggle-check-ipa:checked ~ .ipa_box {
+    display: none;
+}
+
+.ipa_box {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    margin: 45px;
+    justify-content: center;
+}
+
+.dipa_box {
+    display: flex;
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    margin: 45px;
+    justify-content: center;
+}
+
+
+.knap {
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    user-select: none;
+    text-align: center;
+    border: 2px solid black;
+    font-weight: bold;
+    margin: 10px 16px 16px 16px;
+}
+
+.break {
+    flex-basis: 100%;
+    height: 0;
+}
+
+#ipa_knap {
+    background-color: #e0ebff;
+}
+
+#ipa_knap:hover, #dipa_knap:hover {
+    background-color: #fcffcb;
+}
+
+#dipa_knap {
+    background-color: #ffdbca;
+}
+
+.toggle-check-dipa {
+    display: none;
+}
+
+.toggle-check-ipa {
+    display: none;
+}
+
+/* ~~~~~~~~~~~~~ */
+
+/* IPA-vokaler */
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#ipa_vokaler {
+    position: absolute;
+    display: inline-flex;
+    margin-top: 40px;
+}
+
+.ft, .mt, .bt {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.h, .hh, .hl, .l {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    border-radius: 6px;
+    font-size: 18px;
+    width: 5em;
+    text-align: end;
+}
+
+.hoejde {
+    text-align: end;
+}
+
+.ft {
+    top: 2%;
+    left: 15%;
+}
+
+.mt {
+    top: 2%;
+    left: 50%;
+}
+
+.bt {
+    top: 2%;
+    left: 85%;
+}
+
+.h {
+    top: 7%;
+}
+
+.hh {
+    top: 36%;
+}
+
+.hl {
+    top: 65%;
+}
+
+.l {
+    top: 92%;
+}
+
+.ipa_vokal:hover, .dipa_vokal:hover {
+    background-color: #fcffc3;
+}
+
+.ipa_konsonant:hover, .dipa_konsonant:hover {
+    background-color: #fcffc3;
+}
+
+/* IPA */
+
+.ipa_vokal {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: black;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+    min-width: 0.84em;
+    line-height: 1.2em;
+    background-color: #e0ebff;
+    padding: 0.1em;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#ipa_for_hoj_rund {
+    top: 12%;
+    left: 17%;
+}
+
+#ipa_for_hoj_urund {
+    top: 12%;
+    left: 23%;
+}
+
+#ipa_for_halvhoj_rund {
+    top: 35%;
+    left: 33%;
+}
+
+#ipa_for_halvhoj_urund1 {
+    top: 35%;
+    left: 27%;
+}
+
+#ipa_for_halvhoj_urund2 {
+    top: 64%;
+    left: 41%;
+}
+
+#ipa_for_halvlav_rund {
+    top: 64%;
+    left: 47%;
+}
+
+#ipa_for_halvlav_urund {
+    top: 60%;
+    left: 39%;
+}
+
+#ipa_for_lav_rund {
+    top: 78%;
+    left: 49%;
+}
+
+#ipa_for_lav_urund {
+    top: 78%;
+    left: 55%;
+}
+
+#ipa_schwa1 {
+    top: 50%;
+    left: 60%;
+}
+
+#ipa_schwa2 {
+    top: 75%;
+    left: 66%;
+}
+
+#ipa_bag_hoj_rund {
+    top: 12%;
+    left: 87%;
+}
+
+#ipa_bag_halvhoj_rund {
+    top: 35%;
+    left: 87%;
+}
+
+#ipa_bag_halvlav_rund {
+    top: 55%;
+    left: 87%;
+}
+
+#ipa_bag_halvlav_urund {
+    top: 80%;
+    left: 79%;
+}
+
+#ipa_bag_lav_rund {
+    top: 80%;
+    left: 86%;
+}
+
+#ipa_bag_lav_urund {
+    top: 92%;
+    left: 55%;
+}
+
+#ipa_svag_for {
+    top: 21%;
+    left: 37%;
+}
+
+#ipa_svag_bag {
+    top: 21%;
+    left: 77%;
+}
+
+#ipa_svag_halvlav {
+    top: 47%;
+    left: 77%;
+}
+
+.ipa_konsonanter {
+    position: relative;
+    margin-top: clamp(120px, 75%, 650px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.ipa_konsonant {
+    background-color: #e0ebff;
+}
+
+table {
+    margin: 10px;
+    border-collapse: collapse;
+    width: 100%;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 0.35em;
+    border: 0.13em solid;
+    text-align: center;
+    min-width: 25px;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+/*  DIPA */
+
+#dipa_vokaler {
+    position: absolute;
+    display: inline-flex;
+    margin-top: 40px;
+}
+
+.dipa_vokal {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    color: black;
+    border-radius: 8px;
+    width: fit-content;
+    height: fit-content;
+    min-width: 0.84em;
+    line-height: 1.2em;
+    background-color: #ffdbca;
+    padding: 0.1em;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+
+#dipa_for_hoj_rund {
+    top: 14%;
+    left: 18%;
+}
+
+#dipa_for_hoj_urund {
+    top: 14%;
+    left: 24%;
+}
+
+#dipa_for_halvhoj_rund {
+    top: 31%;
+    left: 32%;
+}
+
+#dipa_for_halvhoj_urund1 {
+    top: 22%;
+    left: 22%;
+}
+
+#dipa_for_halvhoj_urund2 {
+    top: 31%;
+    left: 26%;
+}
+
+#dipa_for_halvlav_rund {
+    top: 46%;
+    left: 44%;
+}
+
+#dipa_for_halvlav_urund {
+    top: 60%;
+    left: 39%;
+}
+
+#dipa_for_lav_rund {
+    top: 80%;
+    left: 49%;
+}
+
+#dipa_for_lav_urund {
+    top: 80%;
+    left: 54%;
+}
+
+#dipa_schwa1 {
+    top: 50%;
+    left: 60%;
+}
+
+#dipa_schwa2 {
+    top: 75%;
+    left: 66%;
+}
+
+#dipa_bag_hoj_rund {
+    top: 14%;
+    left: 87%;
+}
+
+#dipa_bag_halvhoj_rund {
+    top: 30%;
+    left: 87%;
+}
+
+#dipa_bag_halvlav_rund {
+    top: 47%;
+    left: 75%;
+}
+
+#dipa_bag_halvlav_urund {
+    top: 80%;
+    left: 79%;
+}
+
+#dipa_bag_lav_rund {
+    top: 69%;
+    left: 87%;
+}
+
+#dipa_bag_lav_urund {
+    top: 88%;
+    left: 69%;
+}
+
+
+.dipa_konsonanter {
+    position: relative;
+    margin-top: clamp(120px, 75%, 650px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.dipa_konsonant {
+    background-color: #ffdbca;
+}
+
+.note:hover {
+    cursor: help;
+}
+
+.ipaeks {
+    background-color: rgba(224, 235, 255, 0.50);
+}
+
+.dipaeks {
+    background-color: rgba(255, 219, 202, 0.50);
+}
+
+#eksempler {
+    width: 100%;
+    max-width: fit-content;
+    padding: 10px;
+    margin-bottom: 25px;
+}
+
+.resurser {
+    background-color: #fdffe3;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px;
+    margin-bottom: 30px;
+}
+
+.resurser_text {
+    text-align: left;
+    margin: 0 25px 20px 25px;
+    font-size: 16px;
+}
