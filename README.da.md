@@ -20,4 +20,4 @@ Klik på et symbol for at høre den lyd, som symbolet repræsenterer.
 
 ### Licens
 
-MIT. Du gør bare hvad end du vil med det!
+MIT. Fyr den af!
