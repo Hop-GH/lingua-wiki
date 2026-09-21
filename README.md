@@ -4,7 +4,7 @@
 
 ## Description
 
-A website for sharing and creating useful tools and resources for linguistics. It is an open-source project made by and for students, currently maintained by linguistics students at the University of Copenhagen (Class of 2029).
+A website for sharing useful tools and resources for linguistics. It is an open-source project made by and for students, currently maintained by linguistics students at the University of Copenhagen (Class of 2029).
 
 The website is bilingual (EN/DA).
 
