@@ -16,8 +16,7 @@ Interaktive lydskriftsskemaer for IPA som beskrevet i R. Schachtenhaufens *Ny Da
 
 Klik på et symbol for at høre den lyd, som symbolet repræsenterer.
 
-Tak til Awiso for de fantastiske skemaer og egen optagelse af alle lydene.
-
+<sub>Tak til <strong>Awiso</strong> for de fantastiske skemaer og egen optagelse af alle lydene.</sub>
 ### Licens
 
 MIT. Du gør bare hvad end du vil med det!
