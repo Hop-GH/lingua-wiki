@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lingua</title>
+
+  <style>
+    /* General page styling */
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: white;
+      color: black;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    /* Main content, centered and shifted slightly upward */
+    .main {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-7vh);
+    }
+
+    /* Site title */
+    h1 {
+      margin: 0 0 40px;
+      font-size: 56px;
+    }
+
+    /* Section heading */
+    h2 {
+      margin: 0 0 16px;
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    /* Regular links */
+    a {
+      color: black;
+      font-size: 16px;
+    }
+
+    /* Language selector */
+    .language-switcher {
+      position: fixed;
+      top: 14px;
+      right: 16px;
+      z-index: 1000;
+      font-size: 14px;
+    }
+
+    .language-switcher a {
+      color: black;
+      font: inherit;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .language-switcher a.active {
+      text-decoration: none;
+      font-weight: bold;
+      cursor: default;
+    }
+
+    /* Bottom-right credit */
+    .maintained {
+      position: fixed;
+      right: 16px;
+      bottom: 14px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Language selector -->
+  <nav class="language-switcher" aria-label="Language">
+    <a href="#" id="lang-da">DA</a>
+    /
+    <a href="#" id="lang-en" class="active">EN</a>
+  </nav>
+
+  <!-- Main page content -->
+  <main class="main">
+    <h1>lingua</h1>
+
+    <h2 id="section-title">oversight</h2>
+
+    <a id="ipa-link" href="tools/ipa-dipa/">
+      IPA/DIPA Charts with Audio
+    </a>
+  </main>
+
+  <!-- Bottom-right credit -->
+  <div class="maintained" id="maintained">
+    created by linguistics students at ucph
+  </div>
+
+  <script>
+    const langDa = document.getElementById('lang-da');
+    const langEn = document.getElementById('lang-en');
+
+    function setLanguage(language) {
+      if (language === 'da') {
+        document.documentElement.lang = 'da';
+        document.getElementById('section-title').textContent = 'oversigt';
+        document.getElementById('ipa-link').textContent = 'IPA/DIPA-skemaer med lyd';
+        document.getElementById('maintained').textContent = 'lavet af lingvistik studerende på KU';
+      } else {
+        document.documentElement.lang = 'en';
+        document.getElementById('section-title').textContent = 'oversight';
+        document.getElementById('ipa-link').textContent = 'IPA/DIPA Charts with Audio';
+        document.getElementById('maintained').textContent = 'created by linguistics students at ucph';
+      }
+
+      langDa.classList.toggle('active', language === 'da');
+      langEn.classList.toggle('active', language === 'en');
+
+      localStorage.setItem('lingua-language', language);
+    }
+
+    langDa.addEventListener('click', function(event) {
+      event.preventDefault();
+      setLanguage('da');
+    });
+
+    langEn.addEventListener('click', function(event) {
+      event.preventDefault();
+      setLanguage('en');
+    });
+
+    const savedLanguage =
+      localStorage.getItem('lingua-language') === 'da' ? 'da' : 'en';
+
+    setLanguage(savedLanguage);
+  </script>
+
+</body>
+</html>
