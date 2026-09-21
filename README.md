@@ -2,13 +2,13 @@
 
 [English](README.md) | [Dansk](README.da.md)
 
-## Foreword
+## Description
 
 A website for sharing and creating useful tools and resources for linguistics. It is an open-source project made by and for students, currently maintained by linguistics students at the University of Copenhagen (Class of 2029).
 
 The website is bilingual (EN/DA).
 
-## Tools & Resources
+## Overview
 
 ### IPA/DIPA Charts with Audio
 
