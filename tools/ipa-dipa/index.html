@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
 <meta charset="utf-8"/>
 <title>Udtalt</title>
@@ -29,7 +29,7 @@
     cursor: default;
 }
 </style></head>
-<body><div aria-label="Language" class="language-switch"><button class="active" id="lang-da" type="button">DA</button> / <button id="lang-en" type="button">EN</button></div>
+<body><div aria-label="Language" class="language-switch"><button class="active" id="lang-en" type="button">EN</button> / <button id="lang-da" type="button">DA</button></div>
 <div class="biggerbox">
 <h1><span data-da="IPA/DIPA-OVERSIGT" data-en="IPA/DIPA OVERVIEW">IPA/DIPA-OVERSIGT</span></h1>
 <div>
@@ -480,7 +480,7 @@
         setLanguage("en");
     });
 
-    setLanguage(localStorage.getItem("lingua-language") === "en" ? "en" : "da");
+    setLanguage(localStorage.getItem("lingua-language") === "da" ? "da" : "en");
 })();
 </script></body>
 </html>
