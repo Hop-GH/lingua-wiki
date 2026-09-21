@@ -1,6 +1,6 @@
 # lingua-wiki
 
-[English](README.md) | [Dansk](README-DA.md)
+[English](README.md) | [Dansk](README.da.md)
 
 ## Foreword
 
