@@ -30,10 +30,27 @@
 }
 
 
-/* Prevent the IPA Stød table from overlapping the DIPA chart */
+
+/* Responsive spacing for the IPA consonant table + Stød box */
+.ipa_konsonanter {
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.ipa_konsonanter > table {
+    flex: 1 1 auto;
+    width: auto;
+    min-width: 0;
+    margin: 10px 0;
+}
+
+.ipa_ekstrategn {
+    flex: 0 0 auto;
+}
+
 .ipa_ekstrategn > table {
-    position: relative;
-    left: -16px;
+    width: auto;
+    margin: 10px 0;
 }
 
 </style></head>
