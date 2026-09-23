@@ -4,7 +4,7 @@
 
 ## Description
 
-Lingua is a hub for tools and resources in linguistics. It is an open-source project made by and for students, currently maintained by linguistics students at the University of Copenhagen (Class of 2029).
+Lingua is a hub for tools, resources, and more within the field of linguistics. It is an open-source project made by and for students, currently maintained by linguistics students at the University of Copenhagen (Class of 2029).
 
 The website is bilingual (EN/DA).
 
