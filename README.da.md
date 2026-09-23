@@ -4,7 +4,7 @@
 
 ## Beskrivelse
 
-Lingua is a hub for tools, resources, and more within the field of linguistics. Det er et open source-projekt lavet af og for studerende pt. vedligeholdt af lingvistikstuderende ved Københavns Universitet (årgang 2026).
+Lingua er en hjemmeside dedikeret til værktøjer, ressourcer m.m. inden for lingvistik. Det er et open source-projekt lavet af og for studerende pt. vedligeholdt af lingvistikstuderende ved Københavns Universitet (årgang 2026).
 
 Hjemmesiden er tosproget (EN/DA).
 
