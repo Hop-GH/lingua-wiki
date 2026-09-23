@@ -1,4 +1,4 @@
-# lingua-wiki
+# Lingua
 
 [English](README.md) | [Dansk](README.da.md)
 
@@ -20,4 +20,4 @@ Klik på et symbol for at høre den lyd, som symbolet repræsenterer.
 
 ### Licens
 
-MIT. Fyr den af!
+MIT
